@@ -3,7 +3,7 @@ import PastSection from "@/components/past-section";
 import PolaroidStack from "@/components/polaroid-stack";
 import SITE from "@/config/site";
 import Signature from "@/components/signature";
-import StickmanPullWord from "@/components/speed-text";
+import StickmanPullWord from "@/components/stickman-text";
 
 export default function Home() {
   return (
@@ -11,14 +11,14 @@ export default function Home() {
       <h1 className="text-lg font-semibold">{SITE.name}</h1>
 
       <p>
-        right now, i’m building backend systems and deploying production
-        workloads to the cloud.
+        right now, i’m focused on building backend systems and deploying
+        production workloads to the cloud.
       </p>
 
       <p>
         i care a lot about <StickmanPullWord text="reliability" />. software
         should keep working after it ships. most of my work revolves around
-        building APIs and systems that handle real users and real traffic.
+        building APIs and services that handle real users and real traffic.
       </p>
 
       <p>
@@ -64,7 +64,7 @@ export default function Home() {
         !
       </p>
 
-      <p className="flex flex-col">
+      <p className="flex flex-col gap-1 w-fit mt-2">
         <Link
           href="/work"
           className="underline decoration-stone-500 underline-offset-[2.5px] hover:decoration-stone-400"

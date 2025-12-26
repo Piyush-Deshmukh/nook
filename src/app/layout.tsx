@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Geist_Mono } from "next/font/google";
+import { Geist_Mono, Caveat } from "next/font/google";
 import SITE from "@/config/site";
 
 export const metadata: Metadata = {
@@ -30,6 +30,12 @@ export const metadata: Metadata = {
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
+});
+
+export const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
 });
 
 export default function RootLayout({

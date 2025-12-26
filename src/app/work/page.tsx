@@ -20,12 +20,15 @@ export default function WorkPage() {
           ← Back to home
         </Link>
       </p>
-      <nav className="flex gap-4 mt-4" aria-label="Work sections">
+      <nav
+        className="flex gap-4 mt-4 text-lg font-semibold"
+        aria-label="Work sections"
+      >
         <button
           onClick={() => setView("experience")}
           aria-pressed={view === "experience"}
           className={
-            "px-1 py-0.5  rounded-sm cursor-pointer " +
+            "py-0.5 rounded-sm cursor-pointer " +
             (view === "experience"
               ? "underline decoration-stone-500 underline-offset-[2.5px] font-semibold"
               : "text-stone-700 hover:underline")
@@ -38,7 +41,7 @@ export default function WorkPage() {
           onClick={() => setView("projects")}
           aria-pressed={view === "projects"}
           className={
-            "px-1 py-0.5  rounded-sm cursor-pointer " +
+            "py-0.5 rounded-sm cursor-pointer " +
             (view === "projects"
               ? "underline decoration-stone-500 underline-offset-[2.5px] font-semibold"
               : "text-stone-700 hover:underline")

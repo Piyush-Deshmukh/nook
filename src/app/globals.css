@@ -55,16 +55,18 @@ body {
 
 .shimmer {
   background: linear-gradient(
-    110deg,
+    90deg,
+    currentColor 0%,
     currentColor 40%,
     #a8a29e 50%,
-    currentColor 60%
+    currentColor 60%,
+    currentColor 100%
   );
-  background-size: 200% 100%;
+  background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 2.5s linear infinite;
+  animation: shimmer 3s linear infinite;
 }
 
 .shimmer-paused {
