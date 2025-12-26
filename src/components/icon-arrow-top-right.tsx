@@ -18,9 +18,3 @@ export default function IconArrowTopRight({
     </svg>
   );
 }
-
-
-
-
-
-

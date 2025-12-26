@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Image, { StaticImageData } from 'next/image';
-import { Tooltip } from '@base-ui/react/tooltip';
-import placeholderImg from "@/public/placeholder.svg"
+import { useState, useEffect } from "react";
+import Image, { StaticImageData } from "next/image";
+import { Tooltip } from "@base-ui/react/tooltip";
+import placeholderImg from "@/public/placeholder.svg";
 
 const allPolaroids: {
   src: StaticImageData;
@@ -45,8 +45,8 @@ export default function PolaroidStack() {
     });
 
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const spacing = isMobile ? 60 : 40;
@@ -69,7 +69,9 @@ export default function PolaroidStack() {
                   hoveredPolaroid === index ? -16 : polaroid.offsetY
                 }px) rotate(${
                   hoveredPolaroid === index ? 0 : polaroid.rotation
-                }deg) scale(${!animatedIn ? 0.5 : hoveredPolaroid === index ? 1.15 : 1})`,
+                }deg) scale(${
+                  !animatedIn ? 0.5 : hoveredPolaroid === index ? 1.15 : 1
+                })`,
                 zIndex: hoveredPolaroid === index ? 10 : index,
               }}
               onMouseEnter={() => setHoveredPolaroid(index)}
@@ -98,8 +100,3 @@ export default function PolaroidStack() {
     </Tooltip.Provider>
   );
 }
-
-
-
-
-

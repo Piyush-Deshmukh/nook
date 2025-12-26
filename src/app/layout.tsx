@@ -1,35 +1,35 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import { Geist_Mono } from 'next/font/google';
-import SITE from '@/config/site';
+import type { Metadata } from "next";
+import "./globals.css";
+import { Geist_Mono } from "next/font/google";
+import SITE from "@/config/site";
 
 export const metadata: Metadata = {
   title: SITE.name,
   description: SITE.description,
   icons: {
-    icon: '/brand-logo.png',
-    apple: '/brand-logo.png',
+    icon: "/brand-logo.png",
+    apple: "/brand-logo.png",
   },
   openGraph: {
     title: SITE.name,
     images: [
       {
-        url: '/brand-logo.png',
+        url: "/brand-logo.png",
         width: 400,
         height: 400,
       },
     ],
   },
   twitter: {
-    card: 'summary',
+    card: "summary",
     title: SITE.name,
-    images: ['/brand-logo.png'],
+    images: ["/brand-logo.png"],
   },
 };
 
 const geistMono = Geist_Mono({
-  subsets: ['latin'],
-  variable: '--font-geist-mono',
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
 });
 
 export default function RootLayout({
@@ -39,8 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-      </head>
+      <head></head>
       <body className={`${geistMono.className} antialiased tracking-tighter`}>
         {children}
       </body>

@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function PastSection() {
   const [isPastOpen, setIsPastOpen] = useState(false);
@@ -11,7 +11,7 @@ export default function PastSection() {
         onClick={() => setIsPastOpen(!isPastOpen)}
         className="font-semibold text-left cursor-pointer transition-opacity bg-stone-100 hover:bg-stone-200 px-2 py-1 rounded-sm"
       >
-        past {isPastOpen ? '▾' : '▸'}
+        past {isPastOpen ? "▾" : "▸"}
       </button>
       {isPastOpen && (
         <div className="border-l border-stone-200 pl-3 flex flex-col gap-2">
@@ -35,8 +35,3 @@ export default function PastSection() {
     </>
   );
 }
-
-
-
-
-

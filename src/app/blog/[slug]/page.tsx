@@ -1,8 +1,7 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import SITE from '@/config/site';
-import { post21 } from './posts/21';
-import { samplePost } from './posts/sample-post';
+import type { Metadata } from "next";
+import Link from "next/link";
+import SITE from "@/config/site";
+import { samplePost } from "./posts/sample-post";
 
 export type BlogPost = {
   title: string;
@@ -13,8 +12,7 @@ export type BlogPost = {
 };
 
 const posts: Record<string, BlogPost> = {
-  '21': post21,
-  'sample-post': samplePost,
+  "sample-post": samplePost,
 };
 
 export async function generateStaticParams() {
@@ -38,8 +36,9 @@ export async function generateMetadata({
   }
 
   const title = `${post.title} | ${SITE.name}`;
-  const description = post.description || `${post.title} - A blog post by ${SITE.author}`;
-  const ogImage = post.ogImage || '/brand-logo.png';
+  const description =
+    post.description || `${post.title} - A blog post by ${SITE.author}`;
+  const ogImage = post.ogImage || "/brand-logo.png";
 
   return {
     title,
@@ -47,7 +46,7 @@ export async function generateMetadata({
     openGraph: {
       title: post.title,
       description,
-      type: 'article',
+      type: "article",
       publishedTime: post.date,
       authors: [SITE.author],
       images: [
@@ -60,7 +59,7 @@ export async function generateMetadata({
       ],
     },
     twitter: {
-      card: post.ogImage ? 'summary_large_image' : 'summary',
+      card: post.ogImage ? "summary_large_image" : "summary",
       title: post.title,
       description,
       images: [ogImage],
@@ -110,6 +109,3 @@ export default async function BlogPost({
     </main>
   );
 }
-
-
-

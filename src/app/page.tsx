@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import PastSection from '@/components/past-section';
-import PolaroidStack from '@/components/polaroid-stack';
-import SITE from '@/config/site';
-import Signature from '@/components/signature';
+import Link from "next/link";
+import PastSection from "@/components/past-section";
+import PolaroidStack from "@/components/polaroid-stack";
+import SITE from "@/config/site";
+import Signature from "@/components/signature";
 
 export default function Home() {
   return (
@@ -21,41 +21,40 @@ export default function Home() {
       </p>
 
       <p>
-        Past projects and experiments are available in the repos linked below;
-        I keep the writing section for essays and notes about what I’m
-        learning.
+        Past projects and experiments are available in the repos linked below; I
+        keep the writing section for essays and notes about what I’m learning.
       </p>
 
       <PastSection />
 
       <p>
-        connect with me on{' '}
+        connect with me on{" "}
         <a
           href={SITE.social.twitter}
           className="underline decoration-stone-500 underline-offset-[2.5px] hover:decoration-stone-400"
         >
           X (twitter)
         </a>
-        ,{' '}
+        ,{" "}
         <a
           href={SITE.social.github}
           className="underline decoration-stone-500 underline-offset-[2.5px] hover:decoration-stone-400"
         >
           github
         </a>
-        ,{' '}
+        ,{" "}
         <a
           href={SITE.social.linkedin}
           className="underline decoration-stone-500 underline-offset-[2.5px] hover:decoration-stone-400"
         >
           linkedin
         </a>
-        , or at{' '}
+        , or at{" "}
         <a
           href="mailto:piyushdeshmukh043@gmail.com"
           className="underline decoration-stone-500 underline-offset-[2.5px] hover:decoration-stone-400"
         >
-         piyushdeshmukh043@gmail.com
+          piyushdeshmukh043@gmail.com
         </a>
         !
       </p>
@@ -69,7 +68,7 @@ export default function Home() {
         </Link>
       </p>
 
-       <Signature />
+      <Signature />
       <PolaroidStack />
     </main>
   );

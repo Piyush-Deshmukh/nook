@@ -1,30 +1,24 @@
-import Link from 'next/link';
-import IconArrowTopRight from '../../components/icon-arrow-top-right';
+import Link from "next/link";
+import IconArrowTopRight from "@/components/icon-arrow-top-right";
 
 const posts = [
   {
-    url: '/blog/21',
-    title: 'Goodbye 20',
-    date: '2026-01-05',
+    url: "/blog/sample-post",
+    title: "Sample Post",
+    date: "2025-12-17",
     external: false,
   },
   {
-    url: '/blog/sample-post',
-    title: 'Sample Post',
-    date: '2025-12-17',
-    external: false,
-  },
-  {
-    url: 'https://www.google.com/',
-    title: 'Some bets',
-    date: '2025-11-29',
+    url: "https://www.google.com/",
+    title: "Some bets",
+    date: "2025-11-29",
     external: true,
-  }
+  },
 ];
 
 export default function Blog() {
   const postsByYear = posts.reduce((acc, post) => {
-    const year = post.date.split('-')[0];
+    const year = post.date.split("-")[0];
     if (!acc[year]) {
       acc[year] = [];
     }
@@ -54,10 +48,7 @@ export default function Blog() {
         {years.map((year) => (
           <div key={year} className="flex flex-col gap-2">
             {postsByYear[year].map((post, index) => (
-              <div
-                key={post.url}
-                className="flex items-center gap-4"
-              >
+              <div key={post.url} className="flex items-center gap-4">
                 {index === 0 ? (
                   <span className="text-neutral-500 text-sm min-w-12">
                     {year}
@@ -91,4 +82,3 @@ export default function Blog() {
     </main>
   );
 }
-

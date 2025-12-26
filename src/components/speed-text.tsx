@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 
 export default function SpeedText() {
   const [isHovering, setIsHovering] = useState(false);
@@ -47,14 +47,14 @@ export default function SpeedText() {
             transform: `translate(-50%, -50%) rotate(${rotation}deg) scale(${scale})`,
           }}
         >
-          <img src="/sonic.webp" alt="Sonic" className="w-full h-auto" style={{ filter: `hue-rotate(${hue}deg)` }} />
+          <img
+            src="/sonic.webp"
+            alt="Sonic"
+            className="w-full h-auto"
+            style={{ filter: `hue-rotate(${hue}deg)` }}
+          />
         </span>
       )}
     </span>
   );
 }
-
-
-
-
-
