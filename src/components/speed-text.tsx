@@ -44,7 +44,7 @@ export default function StickmanPullWord({ text }: { text: string }) {
         </span>
       </span>
 
-      <span className="opacity-0 shimmer">{text}</span>
+      <span className="opacity-0 shimmer font-medium">{text}</span>
 
       <span
         className={clsx(
