@@ -3,6 +3,7 @@ import PastSection from "@/components/past-section";
 import PolaroidStack from "@/components/polaroid-stack";
 import SITE from "@/config/site";
 import Signature from "@/components/signature";
+import StickmanPullWord from "@/components/speed-text";
 
 export default function Home() {
   return (
@@ -10,19 +11,20 @@ export default function Home() {
       <h1 className="text-lg font-semibold">{SITE.name}</h1>
 
       <p>
-        I build software with an emphasis on backend and full-stack systems —
-        thoughtful, reliable, and focused on shipping useful tools.
+        right now, i’m building backend systems and deploying production
+        workloads to the cloud.
       </p>
 
       <p>
-        I enjoy building projects, learning through writing, and improving how
-        systems work at scale. I care about clarity and speed in developer
-        workflows.
+        i care a lot about <StickmanPullWord text="reliability" />. software
+        should keep working after it ships. most of my work revolves around
+        building APIs and systems that handle real users and real traffic.
       </p>
 
       <p>
-        Past projects and experiments are available in the repos linked below; I
-        keep the writing section for essays and notes about what I’m learning.
+        in the past, i've built a multi-store POS system, simplified real-time
+        backend into API-driven system, and shipped projects to production on
+        AWS.
       </p>
 
       <PastSection />
@@ -32,6 +34,7 @@ export default function Home() {
         <a
           href={SITE.social.twitter}
           className="underline decoration-stone-500 underline-offset-[2.5px] hover:decoration-stone-400"
+          target="_blank"
         >
           X (twitter)
         </a>
@@ -39,6 +42,7 @@ export default function Home() {
         <a
           href={SITE.social.github}
           className="underline decoration-stone-500 underline-offset-[2.5px] hover:decoration-stone-400"
+          target="_blank"
         >
           github
         </a>
@@ -46,6 +50,7 @@ export default function Home() {
         <a
           href={SITE.social.linkedin}
           className="underline decoration-stone-500 underline-offset-[2.5px] hover:decoration-stone-400"
+          target="_blank"
         >
           linkedin
         </a>
@@ -59,12 +64,26 @@ export default function Home() {
         !
       </p>
 
-      <p>
+      <p className="flex flex-col">
+        <Link
+          href="/work"
+          className="underline decoration-stone-500 underline-offset-[2.5px] hover:decoration-stone-400"
+        >
+          work →
+        </Link>
+
         <Link
           href="/blog"
           className="underline decoration-stone-500 underline-offset-[2.5px] hover:decoration-stone-400"
         >
           writing →
+        </Link>
+
+        <Link
+          href="/about"
+          className="underline decoration-stone-500 underline-offset-[2.5px] hover:decoration-stone-400"
+        >
+          about →
         </Link>
       </p>
 

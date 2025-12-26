@@ -23,49 +23,56 @@ body {
   display: none;
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: 200% center;
-  }
+@keyframes pendulum {
+  0%,
   100% {
-    background-position: -200% center;
+    transform: rotate(0deg);
   }
+  50% {
+    transform: rotate(-2deg);
+  }
+}
+
+.animate-pendulum {
+  transform-origin: top right;
+  animation: pendulum 0.8s ease-in-out forwards infinite;
+}
+
+@keyframes pull {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+}
+
+.animate-pull {
+  transform-origin: bottom center;
+  animation: pull 0.7s ease-in-out infinite;
 }
 
 .shimmer {
   background: linear-gradient(
-    90deg,
-    currentColor 0%,
+    110deg,
     currentColor 40%,
     #a8a29e 50%,
-    currentColor 60%,
-    currentColor 100%
+    currentColor 60%
   );
-  background-size: 200% auto;
+  background-size: 200% 100%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 3s linear infinite;
+  animation: shimmer 2.5s linear infinite;
 }
 
-.sonic-shimmer {
-  animation: sonic-shimmer 0.8s linear infinite;
+.shimmer-paused {
+  animation-play-state: paused;
 }
 
-@keyframes sonic-shimmer {
-  0% {
-    filter: brightness(1) contrast(1);
-  }
-  40% {
-    filter: brightness(1) contrast(1);
-  }
-  50% {
-    filter: brightness(1.4) contrast(1.1);
-  }
-  60% {
-    filter: brightness(1) contrast(1);
-  }
-  100% {
-    filter: brightness(1) contrast(1);
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
   }
 }

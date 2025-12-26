@@ -14,21 +14,20 @@ export default function PastSection() {
         past {isPastOpen ? "▾" : "▸"}
       </button>
       {isPastOpen && (
-        <div className="border-l border-stone-200 pl-3 flex flex-col gap-2">
+        <div className="border-l border-stone-300 pl-3 flex flex-col gap-2">
           <p>
-            Brief background: education, early projects, and formative
-            experiences that shaped the way I approach engineering and product.
+            most of what i know comes from building things outside of
+            coursework.
           </p>
 
           <p>
-            I’ve worked on small and large systems — building, shipping, and
-            sometimes winding down projects. These experiences inform the
-            practical approach I take to new work.
+            during college, i spent a lot of time interning across different
+            teams, writing code, and pushing projects to production.
           </p>
 
           <p>
-            For details and links to past projects, add entries to the
-            `past-section` component or link repositories from the homepage.
+            some worked well. some didn’t. both taught me more than tutorials
+            ever did.
           </p>
         </div>
       )}
