@@ -14,10 +14,10 @@ export default function AboutPage() {
 
       <h1 className="text-lg font-semibold mt-4">About</h1>
 
-      <p className="flex flex-col gap-6">
-        <span>i’m piyush.</span>
-        <br />i didn’t plan on becoming a software engineer. i just liked
-        solving problems and understanding why things worked the way they did.
+      <p className="flex flex-col gap-4">
+        <span>i’m piyush.</span>i didn’t plan on becoming a software engineer. i
+        just liked solving problems and understanding why things worked the way
+        they did.
       </p>
 
       <p>

@@ -97,7 +97,7 @@ export default function WorkPage() {
               <div className="text-stone-600 text-sm leading-relaxed">
                 {p.description}
               </div>
-              <p className="text-sm text-stone-600 mt-1">
+              <p className="text-sm text-stone-600 mt-0.5">
                 <span className="text-stone-500">stack:</span> {p.stack}
               </p>
             </article>
