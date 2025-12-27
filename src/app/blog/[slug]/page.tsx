@@ -35,7 +35,7 @@ export async function generateMetadata({
   const title = `${post.title} | ${SITE.name}`;
   const description =
     post.description || `${post.title} - A blog post by ${SITE.author}`;
-  const ogImage = post.ogImage || "/brand-logo.png";
+  const ogImage = post.ogImage || "/logo.png";
 
   return {
     title,

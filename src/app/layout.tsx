@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   title: SITE.name,
   description: SITE.description,
   icons: {
-    icon: "/brand-logo.png",
-    apple: "/brand-logo.png",
+    icon: "/logo.png",
+    apple: "/logo.png",
   },
   openGraph: {
     title: SITE.name,
     images: [
       {
-        url: "/brand-logo.png",
+        url: "/logo.png",
         width: 400,
         height: 400,
       },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: SITE.name,
-    images: ["/brand-logo.png"],
+    images: ["/logo.png"],
   },
 };
 
