@@ -51,7 +51,7 @@ export default function WorkPage() {
         </button>
       </nav>
 
-      <section className="mt-4 space-y-4">
+      <section className="mt-4 space-y-6">
         {view === "experience" &&
           EXPERIENCE.map((item) => (
             <article key={item.id} className="flex flex-col gap-1">
@@ -62,7 +62,9 @@ export default function WorkPage() {
                 </h3>
                 <span className="text-sm text-stone-500">{item.date}</span>
               </div>
-              <p className=" text-stone-700">{item.description}</p>
+              <div className="text-stone-600 text-sm leading-relaxed">
+                {item.description}
+              </div>
             </article>
           ))}
 

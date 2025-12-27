@@ -3,16 +3,16 @@
 import { useState, useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Tooltip } from "@base-ui/react/tooltip";
-import placeholderImg from "@/public/placeholder.svg";
+import { Polaroids } from "@/data/polaroid";
 
 const allPolaroids: {
   src: StaticImageData;
   alt: string;
   rotation: number;
   offsetY: number;
-}[] = Array.from({ length: 11 }).map((_, i) => ({
-  src: placeholderImg,
-  alt: `polaroid-${i}`,
+}[] = Array.from(Polaroids).map((polaroid, i) => ({
+  src: polaroid.src,
+  alt: polaroid.alt,
   rotation: (i % 5) * (i % 2 === 0 ? -1 : 1) * 3,
   offsetY: (i % 3) * 4,
 }));
@@ -81,8 +81,9 @@ export default function PolaroidStack() {
                 <Image
                   src={polaroid.src}
                   alt={polaroid.alt}
-                  width={100}
-                  height={120}
+                  width={400}
+                  height={480}
+                  quality={100}
                   className="object-cover w-[100px] h-[120px]"
                 />
               </div>

@@ -23,6 +23,11 @@ body {
   display: none;
 }
 
+article em {
+  font-style: italic;
+  color: rgb(120 113 108);
+}
+
 @keyframes pendulum {
   0%,
   100% {

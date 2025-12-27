@@ -48,17 +48,19 @@ export default function StickmanPullWord({ text }: { text: string }) {
 
       <span
         className={clsx(
-          "absolute right-[calc(50%-11px)] bottom-[1.6em] h-[1.3px] bg-gray-800",
-          "origin-right transition-all duration-500 -rotate-45",
+          "absolute right-[calc(50%-11px)] bottom-[1.6em] h-[1.3px] bg-gray-800 origin-right transition-all duration-500 -rotate-45",
           hovered ? "w-10 opacity-100" : "w-0 opacity-0"
         )}
       />
 
-      {hovered && (
-        <span className="absolute left-[calc(50%+10px)] bottom-[0.9em]">
-          <Stickman />
-        </span>
-      )}
+      <span
+        className={clsx(
+          "absolute left-[calc(50%+10px)] bottom-[0.9em] transition-all duration-500",
+          hovered ? "opacity-100" : "opacity-0"
+        )}
+      >
+        <Stickman />
+      </span>
     </span>
   );
 }
