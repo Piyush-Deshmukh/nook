@@ -11,15 +11,15 @@ export type ProjectItem = {
   title: string;
   code?: string;
   demo?: string;
-  description: string;
-  stack?: string;
+  description: React.ReactNode;
+  stack: string;
 };
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
     id: "e1",
     role: "Software Engineer",
-    company: "Bestpeers Infosystems",
+    company: "Bestpeers Infosystem",
     date: "Jul 2025 — present",
     description: (
       <>
@@ -29,7 +29,7 @@ export const EXPERIENCE: ExperienceItem[] = [
           failure cases, and day-to-day operations.
         </p>
 
-        <p className="mt-3">
+        <p>
           the backend ran on Express and MongoDB, packaged with Docker and
           deployed to AWS ECS. i used S3 and CloudFront to improve reliability,
           and later introduced CI/CD pipelines that made releases predictable.
@@ -50,7 +50,7 @@ export const EXPERIENCE: ExperienceItem[] = [
           load and made the system easier to scale.
         </p>
 
-        <p className="mt-3">
+        <p>
           alongside backend work, i audited and refined the UI/UX of an Outlook
           add-in, improving navigation flow and overall usability. i also spent
           time refactoring legacy code to improve maintainability and reduce
@@ -71,7 +71,7 @@ export const EXPERIENCE: ExperienceItem[] = [
           team ship an MVP faster.
         </p>
 
-        <p className="mt-3">
+        <p>
           for a client project, i delivered a responsive website focused on
           clarity and usability. i also helped keep the team aligned by managing
           tasks and communication, which improved overall delivery time.
@@ -91,7 +91,7 @@ export const EXPERIENCE: ExperienceItem[] = [
           refine web interfaces using HTML, CSS, and JavaScript.
         </p>
 
-        <p className="mt-3">
+        <p>
           i also helped improve cross-browser compatibility, making sure pages
           worked consistently across devices and browsers.
         </p>
@@ -103,19 +103,38 @@ export const EXPERIENCE: ExperienceItem[] = [
 export const PROJECTS: ProjectItem[] = [
   {
     id: "p1",
-    title: "Realtime API Gateway",
-    code: "https://example.com/project/gateway",
-    demo: "https://example.com/project/gateway",
-    description:
-      "A lightweight gateway that standardizes auth and observability for internal APIs.",
-    stack: "Node, TypeScript, AWS",
+    title: "Sharenotes",
+    code: "https://github.com/Piyush-Deshmukh/sharenotes",
+    demo: "https://sharenotes-0eh7.onrender.com",
+    description: (
+      <>
+        <p>i wanted a place where notes didn’t feel disposable.</p>
+        <p className="mt-3">
+          so i built a full-stack note-sharing app with real-time updates,
+          filtering, and media support, paying special attention to how data was
+          structured and accessed as usage scaled.
+        </p>
+      </>
+    ),
+    stack: "Reactjs, Nodejs, Expressjs, MongoDB, Firebase",
   },
   {
     id: "p2",
-    title: "POS Multi-store",
-    demo: "https://example.com/project/gateway",
-    description:
-      "Point-of-sale system supporting multiple stores, offline sync, and reporting.",
-    stack: "Postgres, Prisma, React",
+    title: "Jobdash",
+    code: "https://github.com/Piyush-Deshmukh/JobDash",
+    demo: "https://jobdash.onrender.com/",
+    description: (
+      <>
+        <p>
+          this project started as a personal tool to track job applications.
+        </p>
+        <p className="mt-3">
+          over time, it became a dashboard with analytics, customizable filters,
+          secure authentication, and light/dark themes, designed to stay fast
+          and usable with frequent updates.
+        </p>
+      </>
+    ),
+    stack: "Nodejs, Reactjs, Expressjs, MongoDB",
   },
 ];

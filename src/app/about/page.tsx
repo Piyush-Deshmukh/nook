@@ -40,8 +40,8 @@ export default function AboutPage() {
         long walks.
       </p>
 
-      <p className="mt-6">
-        this site is a snapshot. i’m still figuring things out.
+      <p className="mt-6 text-sm text-stone-600">
+        this site is a snapshot. i’m still figuring things out.🍀
       </p>
     </main>
   );

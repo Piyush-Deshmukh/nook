@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SITE from "@/config/site";
-import { samplePost } from "./posts/sample-post";
 
 export type BlogPost = {
   title: string;
@@ -11,9 +10,7 @@ export type BlogPost = {
   content: React.ReactNode;
 };
 
-const posts: Record<string, BlogPost> = {
-  "sample-post": samplePost,
-};
+const posts: Record<string, BlogPost> = {};
 
 export async function generateStaticParams() {
   return Object.keys(posts).map((slug) => ({
@@ -77,16 +74,11 @@ export default async function BlogPost({
 
   if (!post) {
     return (
-      <main className="flex flex-col gap-2 max-w-[600px] px-10 py-10 leading-relaxed text-base">
-        <h1 className="text-lg font-semibold">Post not found</h1>
-        <p>
-          <Link
-            href="/blog"
-            className="underline decoration-neutral-500 underline-offset-[2.5px] hover:decoration-neutral-400"
-          >
-            ← Back to blog
-          </Link>
-        </p>
+      <main className="min-h-screen w-full flex flex-col gap-2 justify-center items-center">
+        <p className="ml-2">post not found.</p>
+        <Link href="/blog" className="underline">
+          ← Back to blog
+        </Link>
       </main>
     );
   }

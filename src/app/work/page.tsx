@@ -62,7 +62,7 @@ export default function WorkPage() {
                 </h3>
                 <span className="text-sm text-stone-500">{item.date}</span>
               </div>
-              <div className="text-stone-600 text-sm leading-relaxed">
+              <div className="text-stone-600 text-sm leading-relaxed space-y-2">
                 {item.description}
               </div>
             </article>
@@ -94,10 +94,12 @@ export default function WorkPage() {
                   )}
                 </div>
               </div>
-              <p className=" text-stone-700">{p.description}</p>
-              {p.stack && (
-                <p className="text-sm text-stone-500">Stack: {p.stack}</p>
-              )}
+              <div className="text-stone-600 text-sm leading-relaxed">
+                {p.description}
+              </div>
+              <p className="text-sm text-stone-600 mt-1">
+                <span className="text-stone-500">stack:</span> {p.stack}
+              </p>
             </article>
           ))}
       </section>

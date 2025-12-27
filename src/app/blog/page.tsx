@@ -3,15 +3,9 @@ import IconArrowTopRight from "@/components/icon-arrow-top-right";
 
 const posts = [
   {
-    url: "/blog/sample-post",
-    title: "Sample Post",
-    date: "2025-12-17",
-    external: false,
-  },
-  {
-    url: "https://www.google.com/",
-    title: "Some bets",
-    date: "2025-11-29",
+    url: "https://dev.to/piyush_deshmukh/design-tinyurl-3fm1",
+    title: "Design TinyURL",
+    date: "2025-14-09",
     external: true,
   },
 ];

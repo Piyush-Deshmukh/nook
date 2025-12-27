@@ -81,8 +81,8 @@ export default function PolaroidStack() {
                 <Image
                   src={polaroid.src}
                   alt={polaroid.alt}
-                  width={400}
-                  height={480}
+                  width={100}
+                  height={120}
                   quality={100}
                   className="object-cover w-[100px] h-[120px]"
                 />
