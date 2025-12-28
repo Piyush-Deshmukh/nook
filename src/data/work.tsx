@@ -137,4 +137,52 @@ export const PROJECTS: ProjectItem[] = [
     ),
     stack: "Nodejs, Reactjs, Expressjs, MongoDB",
   },
+  {
+    id: "p3",
+    title: "Focus Timer",
+    code: "https://github.com/Piyush-Deshmukh/focus-timer",
+    description: (
+      <>
+        <p>a desktop app i built for myself.</p>
+        <p className="mt-3">
+          it supports focus, break, and long-break modes, with a small overlay
+          that keeps the timer visible even when the app is minimized.
+        </p>
+      </>
+    ),
+    stack: "Electronjs, Reactjs",
+  },
+  {
+    id: "p4",
+    title: "Password Manager",
+    code: "https://github.com/Piyush-Deshmukh/password-manager",
+    description: (
+      <>
+        <p>
+          i built this browser extension to reduce friction while logging in.
+        </p>
+        <p className="mt-3">
+          it supports secure login, saving and organizing credentials, and
+          one-click autofill.
+        </p>
+      </>
+    ),
+    stack: "Expressjs, MongoDB, JavaScript",
+  },
+  {
+    id: "p5",
+    title: "Expense Tracker",
+    code: "https://github.com/Piyush-Deshmukh/expense-tracker",
+    demo: "https://expense-tracker-lyqh.onrender.com/",
+    description: (
+      <>
+        <p>a pwa for tracking monthly expenses and income.</p>
+        <p className="mt-3">
+          it includes a dashboard with charts and filters to view spending
+          patterns by month or across time.
+        </p>
+      </>
+    ),
+    stack: "Typescript, Reactjs, Expressjs, MongoDB, TailwindCSS",
+  },
 ];
