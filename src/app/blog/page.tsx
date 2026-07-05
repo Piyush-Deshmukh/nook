@@ -3,6 +3,12 @@ import IconArrowTopRight from "@/components/icon-arrow-top-right";
 
 const posts = [
   {
+    url: "/blog/refresh-tokens",
+    title: "Refresh Token",
+    date: "2026-21-02",
+    external: false,
+  },
+  {
     url: "https://dev.to/piyush_deshmukh/design-tinyurl-3fm1",
     title: "Design TinyURL",
     date: "2025-14-09",
@@ -11,14 +17,17 @@ const posts = [
 ];
 
 export default function Blog() {
-  const postsByYear = posts.reduce((acc, post) => {
-    const year = post.date.split("-")[0];
-    if (!acc[year]) {
-      acc[year] = [];
-    }
-    acc[year].push(post);
-    return acc;
-  }, {} as Record<string, typeof posts>);
+  const postsByYear = posts.reduce(
+    (acc, post) => {
+      const year = post.date.split("-")[0];
+      if (!acc[year]) {
+        acc[year] = [];
+      }
+      acc[year].push(post);
+      return acc;
+    },
+    {} as Record<string, typeof posts>,
+  );
 
   const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
   years.forEach((year) => {

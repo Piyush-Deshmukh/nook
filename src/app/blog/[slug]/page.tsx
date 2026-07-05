@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SITE from "@/config/site";
+import { refreshTokensBlog } from "./posts/refresh-tokens";
 
 export type BlogPost = {
   title: string;
@@ -10,7 +11,9 @@ export type BlogPost = {
   content: React.ReactNode;
 };
 
-const posts: Record<string, BlogPost> = {};
+const posts: Record<string, BlogPost> = {
+  "refresh-tokens": refreshTokensBlog,
+};
 
 export async function generateStaticParams() {
   return Object.keys(posts).map((slug) => ({
