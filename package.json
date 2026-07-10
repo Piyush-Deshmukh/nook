@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "dayjs": "^1.11.21",
     "next": "^16.0.10",
     "react": "^19.2.1",
     "react-dom": "^19.2.1"
@@ -22,6 +23,6 @@
     "eslint-config-next": "^16.1.1",
     "postcss": "^8.4.30",
     "tailwindcss": "^4.1.17",
-    "typescript": "^5.2.2"
+    "typescript": "^5.9.3"
   }
 }
